@@ -1,3 +1,5 @@
+"use strict"
+
 const Languages = ["Arabic", "Bengali", "Chinese", "Dutch", "English", "French", "German", "Hindi", "Italian", "Japanese", "Korean", "Latin", "Mongolian", "Nepali", "Osmanian", "Polish", "Quechua", "Russian", "Swedish", "Turkish", "Ukrainian", "Vietnamese", "Welsh", "Xhosa", "Yakub", "Zulu"]
 
 const Movies = [
@@ -129,3 +131,15 @@ var [uae, westBengal, ...other] = Languages;                    // Array
 var { firstName, lastName : surName, death = "N/A"} = User;     // Object
 
 Movies.filter(({ Gross }) => Gross > 300);
+
+
+
+// ==================================================================================================================================================================
+
+
+
+// DOM
+
+document.querySelector(".container").classList.add("roman");            // add a new class and did not delete the old one
+document.querySelector(".container").attributes("class", "roman");      // add a new class but delete the old one
+document.querySelector(".container").classList.toggle("roman");         // add and remove class_list
