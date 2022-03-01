@@ -140,6 +140,118 @@ Movies.filter(({ Gross }) => Gross > 300);
 
 // DOM
 
-document.querySelector(".container").classList.add("roman");            // add a new class and did not delete the old one
-document.querySelector(".container").attributes("class", "roman");      // add a new class but delete the old one
-document.querySelector(".container").classList.toggle("roman");         // add and remove class_list
+// document.querySelector(".container").classList.add("roman");            // add a new class and did not delete the old one
+// document.querySelector(".container").attributes("class", "roman");      // add a new class but delete the old one
+// document.querySelector(".container").classList.toggle("roman");         // add and remove class_list
+
+
+// pokedex
+const contain = document.querySelector(".pokemons");
+const url = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/";
+for (let i = 1; i <= 200; i++) {
+    const poke = document.createElement("div");
+    const nImg = document.createElement('img');
+    const data = document.createElement('span');
+    data.innerText = `#${i}`;
+    nImg.src = `${url}${i}.png`;
+    contain.appendChild(poke);
+    poke.appendChild(nImg);
+    poke.appendChild(data);
+}
+
+// random color generation
+
+const change = () => {
+    var r = Math.floor(Math.random() * 255) + 1;
+    var g = Math.floor(Math.random() * 255) + 1;
+    var b = Math.floor(Math.random() * 255) + 1;
+    return `rgba(${r},${g},${b})`;
+}
+
+const but = document.querySelector("button");
+const h1 = document.querySelector("h1");
+
+// h1.addEventListener("click", function () {
+//     this.style.color = change();
+// })
+
+but.addEventListener("click", () => {
+    document.body.style.background = change();
+});
+
+
+// key press events
+
+// window.addEventListener("keydown", function (e) {
+//     console.log(e.key);
+// })
+
+// adding list items
+// const data = document.querySelector("#data");
+// const butS = document.querySelector("#sub");
+// const list = document.querySelector("#listName");
+// const form = document.querySelector("form");
+
+// form.addEventListener("submit", function (e) {
+//     e.preventDefault();         // prevent changing to request page
+//     var l = document.createElement("li");
+//     l.innerText = data.value;
+//     list.append(l);
+// })
+
+// deleting list items
+// const liS = document.querySelectorAll("li");
+// for (let li of liS) {                            // this removes only predefined li elements
+//     li.addEventListener("click", function () {
+//         li.remove();
+//     })
+// }
+
+// list.addEventListener("click", function (e) {
+//     e.target.nodeName === "LI" && e.target.remove();        // removes only li under ul not para nothing else...
+// })
+
+// data.addEventListener("change", function() {         // makes changes after shifting focus
+//     h1.innerText = data.value;
+// })
+
+data.addEventListener("input", function() {             // makes changes in real time
+    h1.innerText = data.value;
+})
+
+
+// Smooth scrolling
+var scroll = setInterval(function() {
+    window.scrollBy(0, 50)
+}, 100);
+clearInterval(scroll);
+
+var navMenuAnchorTags = document.querySelectorAll('.nav-menu a');
+var interval;
+
+for (var i = 0; i < navMenuAnchorTags.length; i++) {
+    navMenuAnchorTags[i].addEventListener('click', function (event) {
+        event.preventDefault();
+        var targetSectionID = this.textContent.trim().toLowerCase();
+        console.log(this.textContent);
+        var targetSection = document.getElementById(targetSectionID);
+        console.log(targetSection);
+        //    interval = setInterval(scrollVertically, 20, targetSection);
+
+        interval = setInterval(function () {
+            scrollVertically(targetSection);
+        }, 20);
+    });
+}
+
+function scrollVertically(targetSection) {
+    var targetSectionCoordinates = targetSection.getBoundingClientRect();
+    if (targetSectionCoordinates.top <= 0) {
+        clearInterval(interval);
+        return;
+    }
+    window.scrollBy(0, 50);
+}
+console.log("%c Names: ", "color: orange; font-weight: bold");
+console.log({Languages, Numbers});
+console.table([Movies, Numbers]);
