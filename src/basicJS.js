@@ -215,43 +215,43 @@ but.addEventListener("click", () => {
 //     h1.innerText = data.value;
 // })
 
-data.addEventListener("input", function() {             // makes changes in real time
-    h1.innerText = data.value;
-})
+// data.addEventListener("input", function() {             // makes changes in real time
+//     h1.innerText = data.value;
+// })
 
 
 // Smooth scrolling
-var scroll = setInterval(function() {
-    window.scrollBy(0, 50)
-}, 100);
-clearInterval(scroll);
+// var scroll = setInterval(function() {
+//     window.scrollBy(0, 50)
+// }, 100);
+// clearInterval(scroll);
 
-var navMenuAnchorTags = document.querySelectorAll('.nav-menu a');
-var interval;
+// var navMenuAnchorTags = document.querySelectorAll('.nav-menu a');
+// var interval;
 
-for (var i = 0; i < navMenuAnchorTags.length; i++) {
-    navMenuAnchorTags[i].addEventListener('click', function (event) {
-        event.preventDefault();
-        var targetSectionID = this.textContent.trim().toLowerCase();
-        console.log(this.textContent);
-        var targetSection = document.getElementById(targetSectionID);
-        console.log(targetSection);
-        //    interval = setInterval(scrollVertically, 20, targetSection);
+// for (var i = 0; i < navMenuAnchorTags.length; i++) {
+//     navMenuAnchorTags[i].addEventListener('click', function (event) {
+//         event.preventDefault();
+//         var targetSectionID = this.textContent.trim().toLowerCase();
+//         console.log(this.textContent);
+//         var targetSection = document.getElementById(targetSectionID);
+//         console.log(targetSection);
+//         //    interval = setInterval(scrollVertically, 20, targetSection);
 
-        interval = setInterval(function () {
-            scrollVertically(targetSection);
-        }, 20);
-    });
-}
+//         interval = setInterval(function () {
+//             scrollVertically(targetSection);
+//         }, 20);
+//     });
+// }
 
-function scrollVertically(targetSection) {
-    var targetSectionCoordinates = targetSection.getBoundingClientRect();
-    if (targetSectionCoordinates.top <= 0) {
-        clearInterval(interval);
-        return;
-    }
-    window.scrollBy(0, 50);
-}
-console.log("%c Names: ", "color: orange; font-weight: bold");
-console.log({Languages, Numbers});
-console.table([Movies, Numbers]);
+// function scrollVertically(targetSection) {
+//     var targetSectionCoordinates = targetSection.getBoundingClientRect();
+//     if (targetSectionCoordinates.top <= 0) {
+//         clearInterval(interval);
+//         return;
+//     }
+//     window.scrollBy(0, 50);
+// }
+// console.log("%c Names: ", "color: orange; font-weight: bold");
+// console.log({Languages, Numbers});
+// console.table([Movies, Numbers]);
