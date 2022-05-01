@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+body {
+    background-color: #000;
+    color: white;
+}
+.container { 
+    text-align: center;
+    padding: 15px;
+}
+h1 {
+    padding: 20px;
+}
+.pokemons div{
+    display: inline-block;
+    margin: 15px;
+    text-align: center;
+}
+.pokemons img {
+    width: 100px;
+    display: block;
+}
