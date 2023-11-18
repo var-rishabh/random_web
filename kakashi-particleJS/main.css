@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
 }
+
 .container {
     margin-left: 5%;
     margin-top: 350px;
@@ -11,8 +12,9 @@
     opacity: 0.5;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
 #particles-js {
-    background-image: url(./back.jpg);
+    background-image: url(./images/back.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
