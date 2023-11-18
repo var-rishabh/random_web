@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Radioactive</title>
     <link rel="stylesheet" href="./main.css">
 </head>
+
 <body>
     <div class="main">
         <nav>
@@ -72,16 +74,17 @@
         var rotate = circle.style.transform;
         var rotateSum;
 
-        upbtn.onclick = function() {
+        upbtn.onclick = function () {
             rotateSum = rotate + "rotate(-90deg)";
             circle.style.transform = rotateSum;
             rotate = rotateSum;
         }
-        downbtn.onclick = function() {
+        downbtn.onclick = function () {
             rotateSum = rotate + "rotate(90deg)";
             circle.style.transform = rotateSum;
             rotate = rotateSum;
         }
     </script>
 </body>
+
 </html>
