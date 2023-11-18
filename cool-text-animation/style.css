@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .container {
     background: #000000;
     display: flex;
@@ -14,12 +15,14 @@
     height: 100vh;
     width: 100%;
 }
+
 ul {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
 ul li a {
     position: relative;
     font-family: 'Montserrat', sans-serif;
@@ -27,8 +30,9 @@ ul li a {
     color: transparent;
     text-decoration: none;
     letter-spacing: 4px;
-    -webkit-text-stroke: 5px rgba(255,255,255,0.7);
+    -webkit-text-stroke: 5px rgba(255, 255, 255, 0.7);
 }
+
 ul li a::before {
     content: attr(data-text);
     position: absolute;
@@ -39,10 +43,12 @@ ul li a::before {
     border-right: 0 solid var(--clr);
     -webkit-text-stroke: 5px var(--clr);
 }
+
 ul li a:hover::before {
     width: 100%;
     filter: drop-shadow(0 0 50px var(--clr));
 }
+
 img {
     width: 150px;
 }
